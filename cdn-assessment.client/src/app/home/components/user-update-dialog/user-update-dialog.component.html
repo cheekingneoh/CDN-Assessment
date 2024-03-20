@@ -1,0 +1,65 @@
+<h2 mat-dialog-title>Update User Details</h2>
+<mat-dialog-content>
+    <div class="formContainer">
+        <form 
+            class="container p-5 formContainer"
+            [formGroup]="userUpdateFormControl"
+            (ngSubmit)="$event.preventDefault(); submitForm();"
+        >
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input 
+                    matInput
+                    formControlName="username"
+                    width="100%"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Mail</mat-label>
+                <input 
+                    matInput
+                    formControlName="mail"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Phone Number</mat-label>
+                <input 
+                    matInput
+                    formControlName="phoneNumber"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Skillsets (Separate with comma [ , ] )</mat-label>
+                <textarea 
+                    matInput
+                    formControlName="skillsets"
+                ></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Hobby</mat-label>
+                <input 
+                    matInput
+                    formControlName="hobby"
+                >
+            </mat-form-field>
+    
+            <div class="mb-3 button-container">
+                <button 
+                    mat-raised-button 
+                    color="warn"
+                    (click)="$event.preventDefault(); deleteUser()"
+                >
+                    Delete
+                </button>
+                <button 
+                    type="submit"
+                    mat-raised-button 
+                    color="primary"
+                >
+                    Update User
+                </button>
+            </div>
+        </form>
+    </div>
+  
+</mat-dialog-content>

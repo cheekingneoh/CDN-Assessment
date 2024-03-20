@@ -1,0 +1,17 @@
+.formContainer{
+    text-align: center;
+    max-width: 500px;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    max-width: 600px;
+}
+
+.button-container .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}

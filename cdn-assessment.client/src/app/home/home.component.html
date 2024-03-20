@@ -1,0 +1,15 @@
+<div class="pageContainer">
+    <h2>CDN-Assesment (Chee King)</h2>
+    <button 
+        mat-raised-button 
+        [color]="loggedIn?'warn':'accent'"
+        (click)="authenticateButtonHandler()"
+    >
+        {{AuthenticationButtonText}}
+    </button>
+    <mat-divider></mat-divider>
+    <user-form></user-form>
+    <mat-divider></mat-divider>
+    <user-table></user-table>
+    <mat-divider></mat-divider>
+</div>
