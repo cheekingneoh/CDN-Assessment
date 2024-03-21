@@ -27,6 +27,8 @@ export class UserFormComponent {
     if(this.userFormControl.valid){
       this.userService.addUser(this.userFormControl.value).subscribe((data)=>{
         console.log(data)
+      }, (error)=>{
+        this.SnackBar.open(error,"x")
       })
     }
   }
